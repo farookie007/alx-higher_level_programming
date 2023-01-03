@@ -1,0 +1,5 @@
+#!/bin/bash
+cache=__pycache__
+py3compile $PYFILE
+mv $cache/$(ls $cache/) $PYFILE"c"
+rmdir $cache/
