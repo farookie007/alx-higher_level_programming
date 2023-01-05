@@ -3,4 +3,7 @@ def uppercase(str):
     a = ord('a')
     A = ord('A')
     diff = a - A
-    print(''.join([chr(ord(char) - diff) if a <= ord(char) <= ord('z') else char for char in str]))
+    for ch in [chr(ord(char) - diff)
+               if a <= ord(char) <= ord('z') else char for char in str]:
+        print("{}".format(ch), end="")
+    print()
