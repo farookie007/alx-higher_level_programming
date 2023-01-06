@@ -13,10 +13,10 @@ if __name__ == "__main__":
     op = args[2]
     b = int(args[3])
     ops = {
-            "+" : add,
-            "-" : sub,
-            "*" : mul,
-            "/" : div
+            "+": add,
+            "-": sub,
+            "*": mul,
+            "/": div
             }
     if op not in ops.keys():
         print("Unknown operator. Available operators: +, -, * and /")
