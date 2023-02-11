@@ -2,6 +2,7 @@
 
 def square_matrix_simple(matrix=[]):
     new_matrix = matrix[:]
-    for i in range(len(matrix)):
-        for j in range(len(i)):
-            new_matrix[i][j] = j ** 2
+    for i, j in enumerate(matrix):
+        for x, y in enumerate(j):
+            new_matrix[i][x] = y ** 2
+    return new_matrix
