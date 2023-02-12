@@ -7,3 +7,4 @@ def complex_delete(a_dictionary, value):
     for k in keys:
         if a_dictionary.get(k) == value:
             a_dictionary.pop(k)
+    return a_dictionary
