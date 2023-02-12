@@ -2,7 +2,7 @@
 
 def best_score(a_dictionary):
     # if the dictionary is empty
-    if len(a_dictionary) <= 0:
+    if (len(a_dictionary) <= 0) or (a_dictionary is None):
         return None
     # gets the maximum integer value in the dictionary
     max_value = max(a_dictionary.values())
