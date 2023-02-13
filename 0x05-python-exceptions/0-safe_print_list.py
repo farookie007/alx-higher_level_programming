@@ -1,9 +1,13 @@
 #!/usr/bin/python3
 
 def safe_print_list(my_list=[], x=0):
-    try:
-        no = 0
+    no = 0
         for element in my_list[:x]:
-            print("{}".format(element), end="")
-    except:
-        pass
+            try:
+                print("{}".format(element), end="")
+                no += 1
+            except:
+                break
+            finally:
+                print()
+                return no
