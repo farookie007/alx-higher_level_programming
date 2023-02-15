@@ -26,17 +26,19 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
-    
+
     @property
     def position(self):
         """Returns the position of the top-left edge of the square"""
         return self.__position
 
     @position.setter
-    def position(self, value:tuple):
+    def position(self, value: tuple):
         """Sets the value of the position attr of the class"""
-        if (not isinstance(value, tuple)) or (value[0] < 0) or (value[1] < 0):
-            raise TypeError("postion must be a tuple of 2 positive integers")
+        if all((isinstance(value, tuple),
+                all(map(lambda x: isinstance(x, int), value)),
+                value[0] >= 0, value[1] >= 0)):
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def area(self):
