@@ -4,6 +4,7 @@
 
 class Square:
     """A class that defines a square"""
+
     def __init__(self, size=0):
         """The constructor method for the `Square` class
         Args:
@@ -16,7 +17,8 @@ class Square:
         """Returns the size of the square"""
         return self.__size
 
-    @size.setter(self, size):
+    @size.setter
+    def size(self, size):
         """Sets the value of the size of the `Square`"""
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
