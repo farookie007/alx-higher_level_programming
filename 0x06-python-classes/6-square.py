@@ -30,7 +30,7 @@ class Square:
     @property
     def position(self):
         """Returns the position of the top-left edge of the square"""
-        return self.position
+        return self.__position
 
     @position.setter
     def position(self, value:tuple):
