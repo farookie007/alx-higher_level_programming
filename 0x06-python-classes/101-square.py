@@ -66,4 +66,4 @@ class Square:
             result += " " * self.position[0]
             result += "#" * self.size
             result += "\n"
-        return result
+        return result[:-1]
