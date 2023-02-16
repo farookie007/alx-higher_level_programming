@@ -46,7 +46,7 @@ class SinglyLinkedList:
         result = ""
         tmp = self.__head
         while tmp:
-            result += tmp.data + "\n"
+            result += str(tmp.data) + "\n"
             tmp = tmp.next_node
         return result[:-1]
 
