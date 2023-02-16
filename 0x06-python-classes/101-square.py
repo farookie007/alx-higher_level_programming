@@ -44,7 +44,7 @@ class Square:
 
     def __str__(self):
         """String representation of the object"""
-        return self.my_print()
+        return self._get_square_string()
 
     def area(self):
         """Calculates and return the area of the `Square` object"""
@@ -52,15 +52,17 @@ class Square:
 
     def my_print(self):
         """Prints out the square to the stdout"""
-        if self.size == 0:
-            print()
-        else:
-            print("\n" * self.position[1], end="")
-            self._print_square(self.position[0])
+        result = ""
+        if self.size != 0:
+            result = _get_square_string()
+        print(result)
 
-    def _print_square(self, h_pos=0):
-        """Protected function to print a square starting at `h_pos`
-        horizontal position"""
+    def _get_square_string(self):
+        """Protected function to return the equivalent string of a Square
+        object."""
+        result = ""
+        result += "\n" * self.position[1]
         for i in range(self.size):
-            print(" " * h_pos, end="")
-            print("#" * self.size)
+            result += " " * self.position[0]
+            result += "#" * self.size
+        return result
