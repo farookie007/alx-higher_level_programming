@@ -17,7 +17,7 @@ class Node:
     @data.setter
     def data(self, value):
         """A setter function for the `data` attribute"""
-        if not isinstance(data, int):
+        if not isinstance(value, int):
             raise TypeError("data must be an integer")
         self.__data = value
 
@@ -42,7 +42,7 @@ class SinglyLinkedList:
         self.__head = None
 
     def __str__(self):
-        """String representation of the class by using the `print()` function"""
+        """String representation of the class using the `print()` function"""
         tmp = self.__head
         while tmp:
             print(tmp.data)
