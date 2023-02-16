@@ -48,7 +48,7 @@ class SinglyLinkedList:
             print(tmp.data)
             tmp = tmp.next_node
 
-    def sorted_inset(self, value):
+    def sorted_insert(self, value):
         """Inserts a new Node into the SinglyLinkedList.
 
         A new Node is created from `value` and inserted into the correct
