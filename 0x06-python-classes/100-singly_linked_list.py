@@ -43,10 +43,12 @@ class SinglyLinkedList:
 
     def __str__(self):
         """String representation of the class using the `print()` function"""
+        result = ""
         tmp = self.__head
         while tmp:
-            print(tmp.data)
+            result += tmp.data + "\n"
             tmp = tmp.next_node
+        return result[:-1]
 
     def sorted_insert(self, value):
         """Inserts a new Node into the SinglyLinkedList.
